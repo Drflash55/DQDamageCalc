@@ -7,6 +7,7 @@ function calculate(wep, arm, helm, skill) {
 }
 
 const BaseText = $("p").text();
+console.log(BaseText)
 function OnClick() {
   console.log("Clicc!");
   let wep = $("#wep").val();
