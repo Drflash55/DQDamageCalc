@@ -7,6 +7,7 @@ function calculate(wep, arm, helm, skill) {
 }
 
 $("#calc").click(function() {
+  console.log("Clicc!");
   let wep = $("#wep").val();
   let arm = $("#arm").val();
   let helm = $("hel").val();
@@ -14,6 +15,6 @@ $("#calc").click(function() {
   
   const BaseDamage = calculate(wep, arm, helm, skill);
   
-  alert(BaseDamage);
+  console.log(BaseDamage);
   
 });
