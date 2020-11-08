@@ -36,7 +36,7 @@ $(function() {
     DamageArray.push(BaseDamage*1.9*1);
     DamageArray.push(BaseDamage*1.9*1.05);
 
-    const regExp = /\((\d)\)/g;
+    const regExp = /\(\d\)/g;
     let text = BaseText;
     const matches = text.matchAll(regExp);
 
@@ -45,8 +45,7 @@ $(function() {
     console.log(BaseText)
     console.log("Checking matches");
     for (const match of matches) {
-      console.log(match[0]);
-      text.replace(`(${match[0]})`, DamageArray[parseInt(match[0])]);
+      text.replace(`${match[0]}`, DamageArray[parseInt(match[0].match(/\(\d\)/))]);
     };
     console.log("Done matches");
 
