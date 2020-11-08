@@ -6,7 +6,7 @@ function calculate(wep, arm, helm, skill) {
  return Math.floor((wep * (0.6597 + 0.013202 * skill)*(arm+helm)*0.0028)*82);
 }
 
-$("#calc").click(function() {
+function OnClick() {
   console.log("Clicc!");
   let wep = $("#wep").val();
   let arm = $("#arm").val();
@@ -17,4 +17,4 @@ $("#calc").click(function() {
   
   console.log(BaseDamage);
   
-});
+};
