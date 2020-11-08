@@ -39,6 +39,7 @@ function OnClick() {
   let text = BaseText;
   const matches = text.matchAll(regExp);
   
+  console.log(matches)
   console.log("Checking matches");
   for (const match of matches) {
     console.log(match[0]);
