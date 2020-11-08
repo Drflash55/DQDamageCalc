@@ -1,6 +1,6 @@
 $(function() {
   $("p").hide()
-  const BaseText = $("p").text());
+  const BaseText = $("p").text();
   
   function calculate(wep, arm, helm, skill) {
    return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*82);
