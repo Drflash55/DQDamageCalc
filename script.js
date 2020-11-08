@@ -6,8 +6,7 @@ function calculate(wep, arm, helm, skill) {
  return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*82);
 }
 
-const Paragraph = $("p")
-const BaseText = Paragraph.text();
+const BaseText = $("p").text();
 function OnClick() {
   console.log("Clicc!");
   let wep = $("#wep").val();
@@ -17,7 +16,6 @@ function OnClick() {
   
   const BaseDamage = calculate(wep, arm, helm, skill);
   
-  console.log(wep,arm,helm,skill)
   console.log(BaseDamage);
   
   let DamageArray = [];
@@ -41,12 +39,14 @@ function OnClick() {
   let text = BaseText;
   const matches = text.matchAll(regExp);
   
+  console.log("Checking matches");
   for (const match of matches) {
     console.log(match[0]);
     text.replace(`(${match[0]})`, DamageArray[parseInt(match[0])]);
   };
+  console.log("Done matches");
   
-  Paragraph.text(text);
-  Paragraph.fadeIn();
+  $("p").text(text);
+  $("p").fadeIn();
   
 };
