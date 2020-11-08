@@ -45,7 +45,9 @@ $(function() {
     console.log(BaseText)
     console.log("Checking matches");
     for (const match of matches) {
-      text.replace(`${match[0]}`, DamageArray[parseInt(match[0].match(/\(\d\)/))]);
+      console.log(match[0])
+      console.log(parseInt(match[0].match(/\(\d\)/)))
+      text.replace(match[0], DamageArray[parseInt(match[0].match(/\(\d\)/))]);
     };
     console.log("Done matches");
 
