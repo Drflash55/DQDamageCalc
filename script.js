@@ -53,5 +53,5 @@ $(function() {
     $("p").text(text);
     $("p").fadeIn();
 
-  };
+  });
 });
