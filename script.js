@@ -14,6 +14,6 @@ $("#calc").click(function() {
   
   const BaseDamage = calculate(wep, arm, helm, skill);
   
-  alarm(BaseDamage);
+  alert(BaseDamage);
   
 });
