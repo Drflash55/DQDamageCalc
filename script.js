@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("p").hide()
+  console.log($("p").text())
 });
 
 function calculate(wep, arm, helm, skill) {
