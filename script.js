@@ -8,7 +8,7 @@ $(function() {
 
   console.log($("p").text())
   console.log(BaseText)
-  $("button").click(function() {
+  $("form button").click(function() {
     console.log("Clicc!");
     let wep = $("#wep").val();
     let arm = $("#arm").val();
