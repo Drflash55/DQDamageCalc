@@ -11,10 +11,11 @@ function OnClick() {
   let wep = $("#wep").val();
   let arm = $("#arm").val();
   let helm = $("hel").val();
-  let skill = $("#skill").val()
+  let skill = $("#skill").val();
   
   const BaseDamage = calculate(wep, arm, helm, skill);
   
+  console.log(wep,arm,helm,skill)
   console.log(BaseDamage);
   
 };
