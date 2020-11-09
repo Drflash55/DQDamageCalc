@@ -3,7 +3,6 @@ $(function() {
   const BaseText = $("p").html();
   
   function calculate(wep, arm, helm, skill) {
-    console.log(wep, arm, helm, skill)
     return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*82);
   }
   
@@ -30,10 +29,10 @@ $(function() {
   console.log(BaseText)
   $("form button").click(function() {
     console.log("Clicc!");
-    let wep = $("#wep").val();
-    let arm = $("#arm").val();
-    let helm = $("#hel").val();
-    let skill = $("#skill").val();
+    let wep = parseInt($("#wep").val());
+    let arm = parseInt($("#arm").val());
+    let helm = parseInt($("#hel").val());
+    let skill = parseInt($("#skill").val());
 
     const BaseDamage = calculate(wep, arm, helm, skill);
     
