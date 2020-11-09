@@ -44,6 +44,7 @@ $(function() {
     console.log(text)
     console.log(BaseText)
     console.log("Checking matches");
+    for (const match of matches) {
       text = text.replace(match[0], DamageArray[match[1]]);
     };
     console.log("Done matches");
