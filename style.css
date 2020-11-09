@@ -7,6 +7,7 @@ body {
 
 h1 {
 	margin: auto;
+	background-size: 75% 100%;
 	background: rgba(255, 255, 255, .9);
 	-webkit-text-stroke: 1px;
 	-webkit-text-stroke-color: black;
