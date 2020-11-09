@@ -12,16 +12,16 @@ $(function() {
       var units = ["k", "M", "B", "T", "qd", "Qn", "sx", "Sp", "O", "N", "de"];
 
       // Divide to get SI Unit engineering style numbers (1e3,1e6,1e9, etc)
-      let unit = Math.floor(((this).toFixed(0).length - 1) / 3) * 3
+      let unit = Math.floor((num.toFixed(0).length - 1) / 3) * 3
       // Calculate the remainder
-      var num = (this / ('1e'+unit)).toFixed(2)
+      var num = (num / ('1e'+unit)).toFixed(2)
       var unitname = units[Math.floor(unit / 3) - 1]
 
       // output number remainder + unitname
       return num + unitname
     }
     
-    return this.toLocaleString()
+    return num.toLocaleString()
   }
 
 
