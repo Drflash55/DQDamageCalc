@@ -1,6 +1,6 @@
 $(function() {
   $("p").hide()
-  const BaseText = $("p").text();
+  const BaseText = $("p").html();
   
   function calculate(wep, arm, helm, skill) {
    return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*82);
@@ -35,7 +35,8 @@ $(function() {
     let skill = $("#skill").val();
 
     const BaseDamage = calculate(wep, arm, helm, skill);
-
+    
+    console.log(wep, arm, helm, skill);
     console.log(BaseDamage);
 
     let DamageArray = [];
@@ -58,21 +59,16 @@ $(function() {
     const regExp = /\((\d)\)/g;
     let text = BaseText;
     const matches = text.matchAll(regExp);
-
-    console.log(matches)
+    
     console.log(text)
-    console.log(BaseText)
     console.log("Checking matches");
     for (const match of matches) {
-      let toChange = commarize(DamageArray[match[1]]) + "\n"
-      if ((parseInt(match[1]) - 1) % 3) {
-        toChange += "\n"
-      }
+      let toChange = commarize(DamageArray[match[1]]);
       text = text.replace(match[0], toChange);
     };
     console.log("Done matches");
 
-    $("p").text(text);
+    $("p").html(text);
     $("p").fadeIn();
 
   });
