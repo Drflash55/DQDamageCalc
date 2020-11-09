@@ -5,6 +5,25 @@ $(function() {
   function calculate(wep, arm, helm, skill) {
    return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*82);
   }
+  
+  function commarize(num) {
+    // Alter numbers larger than 1k
+    if (num >= 1e3) {
+      var units = ["k", "M", "B", "T", "qd", "Qn", "sx", "Sp", "O", "N", "de"];
+
+      // Divide to get SI Unit engineering style numbers (1e3,1e6,1e9, etc)
+      let unit = Math.floor(((this).toFixed(0).length - 1) / 3) * 3
+      // Calculate the remainder
+      var num = (this / ('1e'+unit)).toFixed(2)
+      var unitname = units[Math.floor(unit / 3) - 1]
+
+      // output number remainder + unitname
+      return num + unitname
+    }
+    
+    return this.toLocaleString()
+  }
+
 
   console.log($("p").text())
   console.log(BaseText)
@@ -45,7 +64,11 @@ $(function() {
     console.log(BaseText)
     console.log("Checking matches");
     for (const match of matches) {
-      text = text.replace(match[0], DamageArray[match[1]]);
+      let toChange = commarize(DamageArray[match[1]]) + "\n"
+      if ((parseInt(match[1]) - 1) % 3) {
+        toChange += "\n"
+      }
+      text = text.replace(match[0], toChange);
     };
     console.log("Done matches");
 
