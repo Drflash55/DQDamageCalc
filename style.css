@@ -2,12 +2,12 @@ body {
 	background: url(/DamageCalc/double-bubble-dark.png);
 	font-family: Arial;
 	text-align: center;
-	color: #2c2f33;
+	color: white;
 }
 
 h1 {
 	margin: auto;
-	background: rgba(255, 255, 255, .9);
+	background: rgba(44, 47, 51, .85);
 	-webkit-text-stroke: 1px;
 	-webkit-text-stroke-color: black;
 }
