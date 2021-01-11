@@ -31,7 +31,7 @@ form button {
 	color: white;
 }
 
-form input[type=number] {
+form input {
   background-color: #282b30;
   color: white;
 	border: none;
