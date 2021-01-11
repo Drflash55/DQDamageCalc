@@ -25,10 +25,18 @@ $(function() {
   }
   
   $( document ).ready( function() {
-    new AutoNumeric('#wep', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true});
-    new AutoNumeric('#hel', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true});
-    new AutoNumeric('#arm', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true});
-    new AutoNumeric('#skill', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true});
+    let settings = {
+      digitGroupSeparator: ',',
+      maximumValue: '99999999999999999999999999',
+      unformatOnSubmit: true,
+      allowDecimalPadding: false,
+      decimalPlaces: 0
+    };
+    
+    new AutoNumeric('#wep', settings);
+    new AutoNumeric('#hel', settings);
+    new AutoNumeric('#arm', settings);
+    new AutoNumeric('#skill', settings);
   });
 
 
