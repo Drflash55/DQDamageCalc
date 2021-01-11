@@ -44,10 +44,10 @@ $(function() {
   console.log(BaseText)
   $("form button").click(function() {
     console.log("Clicc!");
-    let wep = parseInt($("#wep").val());
-    let arm = parseInt($("#arm").val());
-    let helm = parseInt($("#hel").val());
-    let skill = parseInt($("#skill").val());
+    let wep = parseInt($("#wep").val().replaceAll(',', ''));
+    let arm = parseInt($("#arm").val().replaceAll(',', ''));
+    let helm = parseInt($("#hel").val().replaceAll(',', ''));
+    let skill = parseInt($("#skill").val().replaceAll(',', ''));
 
     const BaseDamage = calculate(wep, arm, helm, skill);
     
