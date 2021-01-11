@@ -23,6 +23,21 @@ $(function() {
     
     return num.toLocaleString()
   }
+  
+  $( document ).ready( function() {
+    $("#wep").autoNumeric(
+      'init', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true}
+    );
+    $("#hel").autoNumeric(
+      'init', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true}
+    );
+    $("#arm").autoNumeric(
+      'init', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true}
+    );
+    $("#skill").autoNumeric(
+      'init', {aSep: ',', mDec: '0', vMax: '99999999999999999999999999', unformatOnSubmit: true}
+    );
+  });
 
 
   console.log($("p").text())
