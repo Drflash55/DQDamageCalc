@@ -3,7 +3,7 @@ $(function() {
   const BaseText = $("p").html();
   
   function calculate(wep, arm, helm, skill) {
-    return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*91.1);
+    return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*91.15);
   }
   
   function commarize(num) {
