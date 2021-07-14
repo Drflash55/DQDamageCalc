@@ -1,7 +1,7 @@
 $(function() {
   $("p").hide()
   const BaseText = $("p").html();
-  const SPELL_MULT = 107
+  const SPELL_MULT = 101
   
   function calculate(wep, arm, helm, skill) {
     return Math.floor((wep * (0.6597 + 0.013202 * skill)*((arm+helm)*0.0028))*SPELL_MULT);
